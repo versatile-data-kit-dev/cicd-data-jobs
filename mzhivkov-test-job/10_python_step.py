@@ -19,6 +19,6 @@ def run(job_input):
     See IJobInput documentation
     """
     log.info(f"Starting job step {__name__}")
-
-    time.sleep(120)
+    print("Mzhivkov job")
+    time.sleep(60)
     
