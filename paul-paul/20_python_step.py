@@ -12,6 +12,7 @@ log = logging.getLogger(__name__)
 def run(job_input: IJobInput):
     # Create a tensor
     x = torch.rand(5, 3)
+    print("starting")
     print("A random tensor:")
     print(x)
 
