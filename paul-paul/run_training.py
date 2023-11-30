@@ -1,5 +1,6 @@
 # Copyright 2021-2023 VMware, Inc.
 # SPDX-License-Identifier: Apache-2.0
+import os
 from typing import Callable
 
 import mlflow.pytorch
@@ -18,7 +19,10 @@ def print_auto_logged_info(r):
 
 def run_training(training_run: Callable):
     # Auto log all MLflow entities
+
+
     mlflow.pytorch.autolog()
-    with mlflow.start_run(run_name="my_test_run", description="this is my description") as run:
+    with mlflow.start_run(run_name=os.getenv("MLFLOW_RUN_NAME"),
+                          description=os.getenv("MLFLOW_EXPERIMENT_DESCRIPTION")) as run:
         training_run()
     print_auto_logged_info(mlflow.get_run(run_id=run.info.run_id))
