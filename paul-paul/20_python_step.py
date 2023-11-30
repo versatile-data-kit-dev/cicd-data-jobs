@@ -42,7 +42,7 @@ class MNISTModel(L.LightningModule):
 # Initialize our model.
 mnist_model = MNISTModel()
 
-# Load MNIST dataset.
+# Load MNIST dataset
 train_ds = MNIST(
     os.getcwd(), train=True, download=True, transform=transforms.ToTensor()
 )
