@@ -19,8 +19,6 @@ def print_auto_logged_info(r):
 
 def run_training(training_run: Callable):
     # Auto log all MLflow entities
-
-
     mlflow.pytorch.autolog()
     with mlflow.start_run(run_name=os.getenv("MLFLOW_RUN_NAME"),
                           description=os.getenv("MLFLOW_EXPERIMENT_DESCRIPTION")) as run:
