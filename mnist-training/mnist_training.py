@@ -66,3 +66,5 @@ def run(job_input: IJobInput,
     # Initialize our model.
     mnist_model = MNISTModel(hyper_parameter_search_space.lr)
     run_training(lambda: trainer.fit(mnist_model, train_loader))
+
+
