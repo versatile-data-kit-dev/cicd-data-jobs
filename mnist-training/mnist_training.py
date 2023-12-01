@@ -58,7 +58,7 @@ trainer = L.Trainer(max_epochs=3)
 
 
 class HyperParameterSearchSpace(BaseModel):
-    lr:float = Field(default=0.2,ge=0,lt=2, description="the learning rate of the algorithm")
+    lr: float = Field(default=0.2, ge=0, lt=2, description="the learning rate")
 
 def run(job_input: IJobInput,
         hyper_parameter_search_space: HyperParameterSearchSpace = HyperParameterSearchSpace()):
