@@ -65,7 +65,6 @@ class HyperParameterSearchSpace(BaseModel):
 def run(job_input: IJobInput,
         hyper_parameter_search_space: HyperParameterSearchSpace = HyperParameterSearchSpace()):
     # job_input.run_training()
-    # Initialize our model.
     mnist_model = MNISTModel(hyper_parameter_search_space.lr)
     run_training(lambda: trainer.fit(mnist_model, train_loader))
 
