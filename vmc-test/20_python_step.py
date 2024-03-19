@@ -18,7 +18,5 @@ def run(job_input: IJobInput):
     * processing data into a database.
     See IJobInput documentation for more details.
     """
-    log.info(f"Starting job step {__name__}")
-    job_input.send_tabular_data_for_ingestion("", [], "", "", "", "")
-
+    log.error(f"Starting job step {__name__}")
 
