@@ -19,5 +19,4 @@ def run(job_input: IJobInput):
     See IJobInput documentation for more details.
     """
     log.info(f"Starting job step {__name__}")
-    print("test")
-
+    job_input.send_tabular_data_for_ingestion("", [], "", "", "")
